@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Integração Customizada para entrega de conteúdos - Eduzz by deveduzz</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Integração Customizada para entrega de conteúdos - Eduzz</h1>
+        <p>Integração Customizada</p>
+
+        <p class="view"><a href="https://github.com/deveduzz/custom">View the Project on GitHub <small>deveduzz/custom</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/deveduzz/custom/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/deveduzz/custom/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/deveduzz/custom">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>*A entrega de conteúdo de forma customizada requer habilidades de desenvolvimento.</p>
+
+<p>Esse tipo de integração é utilizada quando a entrega de conteúdo requer operações avançadas e especificas ou a entrega seja através de plataforma própria.</p>
+
+<p>Para isso é necessário seguir os seguintes passos:</p>
+
+<p>1- É necessário configurar uma URL que receberá o post no cadastro de conteúdo na Eduzz.
+Dentro do cadastro do seu conteúdo existe uma sessão chamada 'Entrega/Ativação', selecione a opção 'Customizada' no campo 'Integração para Entrega de Conteúdo' e configure o campo 'URL' com a url que receberá o POST na entrega desse conteúdo, após ser vendido.</p>
+
+<p>2- Quando houver uma entrega a URL configurada no cadastro do conteúdo receberá um POST com os seguintes campos.</p>
+
+<ul>
+<li>
+<strong>edz_fat_cod:</strong> Código da Fatura que originou a entrega</li>
+<li>
+<strong>edz_cli_cod:</strong> Código do Cliente que efetuou o pagamento da fatura na Eduzz</li>
+<li>
+<strong>edz_cli_rsocial:</strong> Nome do Cliente que efetuou o pagamento da fatura na Eduzz</li>
+<li>
+<strong>edz_cli_email:</strong> E-mail do Cliente que efetuou o pagamento da fatura na Eduzz</li>
+<li>
+<strong>edz_fat_dtcadastro:</strong> Data de geração da fatura na Eduzz</li>
+<li>
+<strong>edz_gtr_dist:</strong> Código do Afiliado que realizou a venda do conteúdo na Eduzz</li>
+<li>
+<strong>edz_gtr_param1:</strong> Parâmetros opcionais enviados via GET (p1) no redirecionamento para o checkout</li>
+<li>
+<strong>edz_gtr_param2:</strong> Parâmetros opcionais enviados via GET (p2) no redirecionamento para o checkout</li>
+<li>
+<strong>edz_gtr_param3:</strong> Parâmetros opcionais enviados via GET (p3) no redirecionamento para o checkout</li>
+<li>
+<strong>edz_gtr_param4:</strong> Parâmetros opcionais enviados via GET (p4) no redirecionamento para o checkout</li>
+<li>
+<strong>edz_gtr_param5:</strong> Parâmetros opcionais enviados via GET (p5) no redirecionamento para o checkout</li>
+</ul>
+
+<p>3- Fora os campos citados na tabela é enviado um campo chamado sid que é a chave de autenticação do envio. É através dela que seu sistema poderá reconhecer essa requisição como uma requisição válida.</p>
+
+<p>A lógica para geração do sid é a seguinte:</p>
+
+<ul>
+<li>Ordene todos os campos recebidos por nome e colocar os valores em uma string.</li>
+<li> No final dessa string adicione sua API KEY (também mostrada no cadastro de conteúdo) e adicione no final da string</li>
+<li>Por último criptografe essa string com a criptografia MD5 e pronto, você tem a sid para comparar com a sid enviada por nós e autenticar essa requisição como válida.</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/deveduzz">deveduzz</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
