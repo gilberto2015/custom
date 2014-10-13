@@ -1,4 +1,0 @@
-custom
-======
-
-Integração Customizada
