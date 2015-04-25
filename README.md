@@ -10,6 +10,7 @@ Dentro do cadastro do seu conteúdo existe uma sessão chamada 'Entrega/Ativaç�
 2- Quando houver uma entrega a URL configurada no cadastro do conteúdo receberá um POST com os seguintes campos.
 
 * **edz_fat_cod:** Código da Fatura que originou a entrega
+* **edz_cnt_cod:** Código do conteúdo que o cliente final comprou na Eduzz
 * **edz_cli_cod:** Código do Cliente que efetuou o pagamento da fatura na Eduzz
 * **edz_cli_rsocial:** Nome do Cliente que efetuou o pagamento da fatura na Eduzz
 * **edz_cli_email:** E-mail do Cliente que efetuou o pagamento da fatura na Eduzz
