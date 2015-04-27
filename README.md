@@ -28,3 +28,6 @@ A lógica para geração do sid é a seguinte:
 - Ordene todos os campos recebidos por nome e colocar os valores em uma string.
 -  No final dessa string adicione sua API KEY (também mostrada no cadastro de conteúdo) e adicione no final da string
 - Por último criptografe essa string com a criptografia MD5 e pronto, você tem a sid para comparar com a sid enviada por nós e autenticar essa requisição como válida.
+- 
+Outra opção de validacão é através do campo 'nsid':
+Verificar se o campo nsid é igual a SHA1(edz_fat_cod + edz_cnt_cod + edz_cli_cod)
