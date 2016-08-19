@@ -14,6 +14,7 @@ Dentro do cadastro do seu conteúdo existe uma sessão chamada 'Entrega/Ativaç�
 * **edz_cli_cod:** Código do Cliente que efetuou o pagamento da fatura na Eduzz
 * **edz_cli_rsocial:** Nome do Cliente que efetuou o pagamento da fatura na Eduzz
 * **edz_cli_email:** E-mail do Cliente que efetuou o pagamento da fatura na Eduzz
+* **edz_cli_cel:** Celular do Cliente que efetuou o pagamento da fatura na Eduzz
 * **edz_fat_dtcadastro:** Data de geração da fatura na Eduzz
 * **edz_gtr_dist:** Código do Afiliado que realizou a venda do conteúdo na Eduzz
 * **edz_gtr_param1:** Parâmetros opcionais enviados via GET (p1) no redirecionamento para o checkout
@@ -21,6 +22,7 @@ Dentro do cadastro do seu conteúdo existe uma sessão chamada 'Entrega/Ativaç�
 * **edz_gtr_param3:** Parâmetros opcionais enviados via GET (p3) no redirecionamento para o checkout
 * **edz_gtr_param4:** Parâmetros opcionais enviados via GET (p4) no redirecionamento para o checkout
 * **edz_gtr_param5:** Parâmetros opcionais enviados via GET (p5) no redirecionamento para o checkout
+* **edz_valorpago:** Valor pago pelo cliente
 
 3- Fora os campos citados na tabela é enviado um campo chamado sid que é a chave de autenticação do envio. É através dela que seu sistema poderá reconhecer essa requisição como uma requisição válida.
 
